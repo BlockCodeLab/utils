@@ -49,11 +49,15 @@ export function LibraryItem(props) {
           />
         </div>
       )}
-      <div className={styles.featuredText}>
-        <span className={styles.libraryItemName}>{props.name}</span>
-        <br />
-        <span className={styles.featuredDescription}>{props.description}</span>
-      </div>
+      {props.title ? (
+        <div className={classNames(styles.libraryItemName, styles.featuredTitle)}>{props.title}</div>
+      ) : (
+        <div className={styles.featuredText}>
+          <span className={styles.libraryItemName}>{props.name}</span>
+          <br />
+          <span className={styles.featuredDescription}>{props.description}</span>
+        </div>
+      )}
       {(props.blocksRequired ||
         props.micropythonRequired ||
         props.bluetoothRequired ||

@@ -126,6 +126,7 @@ export function Library({
                   icon={dataItem.icon}
                   image={dataItem.image}
                   name={dataItem.name}
+                  title={dataItem.title}
                   description={dataItem.description}
                   bluetoothRequired={dataItem.bluetoothRequired}
                   internetRequired={dataItem.internetRequired}
