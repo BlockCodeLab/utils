@@ -25,11 +25,11 @@
   height: calc(var(--library-filter-bar-height) + 2rem); /* padding */
   background-color: var(--motion-transparent);
   padding: 0 1rem;
-  font-size: 0.875rem;
 }
 
 .filter-bar-item {
   margin-right: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .filter {

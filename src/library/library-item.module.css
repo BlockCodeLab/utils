@@ -17,7 +17,7 @@
   border-radius: var(--space);
   text-align: center;
   cursor: pointer;
-  font-size: 0.825rem;
+  font-size: 0.9rem;
 }
 
 .library-item-featured {
@@ -116,7 +116,6 @@
 
 .featured-title {
   font-weight: bold;
-  font-size: 1rem;
   margin: calc(var(--space) * 1.5) 0 calc(var(--space) * 2);
 }
 
@@ -144,7 +143,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  font-size: 12px;
+  font-size: var(--standard-font-size);
   color: var(--text-primary);
   opacity: 0.75;
 
