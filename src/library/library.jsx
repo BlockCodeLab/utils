@@ -111,34 +111,32 @@ export function Library({
         })}
       >
         {data && data.length > 0 ? (
-          data
-            .filter((item) => (DEVELOPMENT ? true : !item.disabled && !item.preview))
-            .map((dataItem, index) => (
-              <ContextMenu
-                menuItems={dataItem.contextMenu}
-                key={index}
-              >
-                <LibraryItem
-                  id={index}
-                  disabled={dataItem.disabled}
-                  preview={dataItem.preview}
-                  featured={dataItem.featured}
-                  icon={dataItem.icon}
-                  image={dataItem.image}
-                  name={dataItem.name}
-                  title={dataItem.title}
-                  description={dataItem.description}
-                  bluetoothRequired={dataItem.bluetoothRequired}
-                  internetRequired={dataItem.internetRequired}
-                  popsicleRequired={dataItem.popsicleRequired}
-                  dupontRequired={dataItem.dupontRequired}
-                  collaborator={dataItem.collaborator}
-                  onMouseEnter={dataItem.onMouseEnter}
-                  onMouseLeave={dataItem.onMouseLeave}
-                  onSelect={dataItem.onSelect}
-                />
-              </ContextMenu>
-            ))
+          data.map((dataItem, index) => (
+            <ContextMenu
+              menuItems={dataItem.contextMenu}
+              key={index}
+            >
+              <LibraryItem
+                id={index}
+                disabled={dataItem.disabled}
+                preview={dataItem.preview}
+                featured={dataItem.featured}
+                icon={dataItem.icon}
+                image={dataItem.image}
+                name={dataItem.name}
+                title={dataItem.title}
+                description={dataItem.description}
+                bluetoothRequired={dataItem.bluetoothRequired}
+                internetRequired={dataItem.internetRequired}
+                popsicleRequired={dataItem.popsicleRequired}
+                dupontRequired={dataItem.dupontRequired}
+                collaborator={dataItem.collaborator}
+                onMouseEnter={dataItem.onMouseEnter}
+                onMouseLeave={dataItem.onMouseLeave}
+                onSelect={dataItem.onSelect}
+              />
+            </ContextMenu>
+          ))
         ) : (
           <div className={styles.spinnerWrapper}>
             {loading ? (
