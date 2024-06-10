@@ -14,7 +14,7 @@ export function BufferedInput({ value, forceFocus, onSubmit, ...props }) {
     const isNumeric = typeof value === 'number';
     const validatesNumeric = isNumeric ? !isNaN(bufferedValue) : true;
     if (bufferedValue !== null && validatesNumeric && onSubmit) {
-      onSubmit(isNumeric ? Number(bufferedValue) : bufferedValue);
+      onSubmit(isNumeric ? Number(bufferedValue) : bufferedValue, e);
     }
     setBufferedValue(null);
     if (e && forceFocus) {
@@ -24,7 +24,7 @@ export function BufferedInput({ value, forceFocus, onSubmit, ...props }) {
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      handleFlush();
+      handleFlush(e);
       e.target.blur();
     }
   };
