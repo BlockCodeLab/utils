@@ -116,7 +116,9 @@ export function LibraryItem(props) {
     </div>
   ) : (
     <div
-      className={styles.libraryItem}
+      className={classNames(styles.libraryItem, {
+        [styles.large]: props.large,
+      })}
       onClick={props.onSelect}
     >
       <div className={styles.libraryItemImageContainerWrapper}>

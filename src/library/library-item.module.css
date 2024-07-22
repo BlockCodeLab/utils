@@ -20,6 +20,12 @@
   font-size: 0.9rem;
 }
 
+.library-item.large {
+  flex-basis: 220px;
+  height: 220px;
+  max-width: 220px;
+}
+
 .library-item-featured {
   align-self: stretch;
 }
@@ -56,6 +62,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.large .library-item-image-container-wrapper,
+.large .library-item-image-container {
+  height: 160px;
 }
 
 .library-item-inset-image-container {
