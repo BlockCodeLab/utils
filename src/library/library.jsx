@@ -128,7 +128,7 @@ export function Library({
                 description={dataItem.description}
                 bluetoothRequired={dataItem.bluetoothRequired}
                 internetRequired={dataItem.internetRequired}
-                popsicleRequired={dataItem.popsicleRequired}
+                popexRequired={dataItem.popexRequired}
                 dupontRequired={dataItem.dupontRequired}
                 collaborator={dataItem.collaborator}
                 onMouseEnter={dataItem.onMouseEnter}

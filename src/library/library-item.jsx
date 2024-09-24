@@ -6,7 +6,7 @@ import iconBlocks from './icons/icon-blocks.svg';
 import iconMicroPython from './icons/icon-micropython.svg';
 import iconBluetooth from './icons/icon-bluetooth.svg';
 import iconInternet from './icons/icon-internet.svg';
-import iconPopsicle from './icons/icon-popsicle.svg';
+import iconPopex from './icons/icon-popex.svg';
 import iconDupont from './icons/icon-dupont.svg';
 
 export function LibraryItem(props) {
@@ -62,7 +62,7 @@ export function LibraryItem(props) {
         props.micropythonRequired ||
         props.bluetoothRequired ||
         props.internetRequired ||
-        props.popsicleRequired ||
+        props.popexRequired ||
         props.dupontRequired ||
         props.collaborator) && (
         <div className={styles.featuredMetadata}>
@@ -71,7 +71,7 @@ export function LibraryItem(props) {
               props.micropythonRequired ||
               props.bluetoothRequired ||
               props.internetRequired ||
-              props.popsicleRequired ||
+              props.popexRequired ||
               props.dupontRequired) && (
               <div>
                 <div>
@@ -92,7 +92,7 @@ export function LibraryItem(props) {
                   {props.micropythonRequired && <img src={iconMicroPython} />}
                   {props.bluetoothRequired && <img src={iconBluetooth} />}
                   {props.internetRequired && <img src={iconInternet} />}
-                  {props.popsicleRequired && <img src={iconPopsicle} />}
+                  {props.popexRequired && <img src={iconPopex} />}
                   {props.dupontRequired && <img src={iconDupont} />}
                 </div>
               </div>
