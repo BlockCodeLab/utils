@@ -48,7 +48,7 @@
   height: var(--library-header-height);
   box-sizing: border-box;
   width: 100%;
-  background-color: var(--ui-modal-overlay);
+  background: var(--ui-modal-overlay);
   font-size: 1rem;
 }
 

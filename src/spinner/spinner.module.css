@@ -79,6 +79,7 @@
 .spinner.info {
   border-color: var(--ui-white-transparent);
 }
+
 .spinner.info::after {
   border-top-color: var(--ui-white);
 }
@@ -86,6 +87,7 @@
 .spinner.primary {
   border-color: var(--motion-transparent);
 }
+
 .spinner.primary::after {
   border-top-color: var(--motion-primary);
 }

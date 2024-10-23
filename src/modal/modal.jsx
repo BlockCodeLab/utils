@@ -7,11 +7,11 @@ import backIcon from './icon-back.svg';
 import closeIcon from './icon-close.svg';
 import helpIcon from './icon-help.svg';
 
-export function Modal({ title, fullScreen: isFullScreen, onClose, className, children }) {
+export function Modal({ title, fullScreen: isFullScreen, onClose, className, headerClassName, children }) {
   return (
     <div className={styles.modalOverlay}>
       <div className={classNames(styles.modalContent, className, { [styles.fullScreen]: isFullScreen })}>
-        <div className={styles.modalHeader}>
+        <div className={classNames(styles.modalHeader, headerClassName)}>
           <div className={classNames(styles.headerItem, styles.headerItemTitle)}>{title}</div>
           <div
             className={classNames(styles.headerItem, styles.headerItemClose, { [styles.headerItemBack]: isFullScreen })}
