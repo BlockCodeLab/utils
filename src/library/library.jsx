@@ -44,8 +44,8 @@ export function Library({
         item.eegg
           ? item.id === query || item.name.toLowerCase() === query // for search eegg item
           : (item.id && item.id.toLowerCase().includes(query)) ||
-            item.name.toLowerCase().includes(query) ||
-            item.tags.includes(query),
+          item.name.toLowerCase().includes(query) ||
+          item.tags.includes(query),
       ),
     );
   };
@@ -126,6 +126,8 @@ export function Library({
                 name={dataItem.name}
                 title={dataItem.title}
                 description={dataItem.description}
+                author={dataItem.author}
+                copyright={dataItem.copyright}
                 bluetoothRequired={dataItem.bluetoothRequired}
                 internetRequired={dataItem.internetRequired}
                 popexRequired={dataItem.popexRequired}

@@ -81,7 +81,7 @@
   height: 3.5rem;
   border-radius: 0.5rem;
   border: 0.25rem solid var(--ui-white);
-
+  overflow: hidden;
   margin-left: 1rem;
 }
 
@@ -94,19 +94,21 @@
   width: 2.5rem;
 }
 
-.library-item-name {
+.library-item-name,
+.library-item-detial {
   width: 100%;
   margin: 0.25rem 0;
   text-align: center;
-
-  /*
-        For truncating overflowing text gracefully
-        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text
-    */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 0;
+}
+
+.library-item-detial {
+  margin: 0 0 0.25rem 0;
+  font-size: var(--small-font-size);
+  color: var(--text-primary);
 }
 
 .featured-item {
