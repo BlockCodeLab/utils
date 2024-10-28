@@ -2,7 +2,7 @@
 import { useState } from 'preact/hooks';
 import { Input } from './input';
 
-export function BufferedInput({ value, forceFocus, onSubmit, ...props }) {
+export function BufferedInput({ value, type, forceFocus, onSubmit, ...props }) {
   const [bufferedValue, setBufferedValue] = useState(null);
 
   const handleFocus = (e) => {
@@ -11,9 +11,9 @@ export function BufferedInput({ value, forceFocus, onSubmit, ...props }) {
   };
 
   const handleFlush = (e) => {
-    const isNumeric = typeof value === 'number';
-    const validatesNumeric = isNumeric ? !isNaN(bufferedValue) : true;
-    if (bufferedValue !== null && validatesNumeric && onSubmit) {
+    const isNumeric = type === 'number';
+    const validated = isNumeric ? !isNaN(bufferedValue) : true;
+    if (bufferedValue !== null && validated && onSubmit) {
       onSubmit(isNumeric ? Number(bufferedValue) : bufferedValue, e);
     }
     setBufferedValue(null);
