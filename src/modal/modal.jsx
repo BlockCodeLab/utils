@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Text } from '@blockcode/core';
+import { Text, useLayout } from '@blockcode/core';
 import { Button } from '../button/button';
 
 import styles from './modal.module.css';
@@ -8,10 +8,19 @@ import closeIcon from './icon-close.svg';
 import helpIcon from './icon-help.svg';
 
 export function Modal({ title, fullScreen: isFullScreen, onClose, className, headerClassName, children }) {
+  const { macosMenubarStyle } = useLayout();
   return (
     <div className={styles.modalOverlay}>
-      <div className={classNames(styles.modalContent, className, { [styles.fullScreen]: isFullScreen })}>
-        <div className={classNames(styles.modalHeader, headerClassName)}>
+      <div
+        className={classNames(styles.modalContent, className, {
+          [styles.fullScreen]: isFullScreen,
+        })}
+      >
+        <div
+          className={classNames(styles.modalHeader, headerClassName, {
+            [styles.electron]: isFullScreen && macosMenubarStyle,
+          })}
+        >
           <div className={classNames(styles.headerItem, styles.headerItemTitle)}>{title}</div>
           <div
             className={classNames(styles.headerItem, styles.headerItemClose, { [styles.headerItemBack]: isFullScreen })}

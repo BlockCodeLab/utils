@@ -40,7 +40,6 @@
 }
 
 .modal-header {
-  display: -webkit-box;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -50,6 +49,10 @@
   width: 100%;
   background: var(--ui-modal-overlay);
   font-size: 1rem;
+}
+
+.electron {
+  padding-left: 58px;
 }
 
 .header-item {
