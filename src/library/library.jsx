@@ -44,8 +44,11 @@ export function Library({
         item.eegg
           ? item.id === query || item.name.toLowerCase() === query // for search eegg item
           : (item.id && item.id.toLowerCase().includes(query)) ||
-          item.name.toLowerCase().includes(query) ||
-          item.tags.includes(query),
+            item.name.toLowerCase().includes(query) ||
+            item.author?.toLowerCase().includes(query) ||
+            item.copyright?.toLowerCase().includes(query) ||
+            item.collaborator?.toLowerCase().includes(query) ||
+            item.tags.includes(query),
       ),
     );
   };
