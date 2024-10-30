@@ -25,7 +25,7 @@ export function Library({
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const filterEeggItems = items.filter((item) => !item.eegg);
+  const filterEeggItems = items.filter((item) => !item.eegg && !item.hidden);
 
   useEffect(() => {
     setData(filterEeggItems);
@@ -40,15 +40,17 @@ export function Library({
     setTag('all');
     const query = e.target.value.toLowerCase();
     setData(
-      items.filter((item) =>
-        item.eegg
-          ? item.id === query || item.name.toLowerCase() === query // for search eegg item
-          : (item.id && item.id.toLowerCase().includes(query)) ||
-            item.name.toLowerCase().includes(query) ||
-            item.author?.toLowerCase().includes(query) ||
-            item.copyright?.toLowerCase().includes(query) ||
-            item.collaborator?.toLowerCase().includes(query) ||
-            item.tags.includes(query),
+      items.filter(
+        (item) =>
+          !item.hidden &&
+          (item.eegg
+            ? item.id === query || item.name.toLowerCase() === query // for search eegg item
+            : (item.id && item.id.toLowerCase().includes(query)) ||
+              item.name.toLowerCase().includes(query) ||
+              item.author?.toLowerCase().includes(query) ||
+              item.copyright?.toLowerCase().includes(query) ||
+              item.collaborator?.toLowerCase().includes(query) ||
+              item.tags.includes(query)),
       ),
     );
   };
@@ -133,8 +135,6 @@ export function Library({
                 copyright={dataItem.copyright}
                 bluetoothRequired={dataItem.bluetoothRequired}
                 internetRequired={dataItem.internetRequired}
-                popexRequired={dataItem.popexRequired}
-                dupontRequired={dataItem.dupontRequired}
                 collaborator={dataItem.collaborator}
                 onMouseEnter={dataItem.onMouseEnter}
                 onMouseLeave={dataItem.onMouseLeave}
