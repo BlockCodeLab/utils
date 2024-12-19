@@ -1,20 +1,18 @@
 {
-  "name": "@blockcode/ui",
-  "module": "dist/index.js",
+  "name": "@blockcode/utils",
+  "private": "true",
+  "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "build": "bun-build",
-    "dev": "bun-build --watch ./src"
+  "module": "./dist/index.js",
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "keymirror": "^0.1.1",
+    "konva": "^9.3.16",
+    "localforage": "^1.10.0",
+    "nanoid": "^5.0.9",
+    "preact": "^10.25.0"
   },
   "devDependencies": {
-    "bun-types": "latest",
-    "bun-build": "github:kankungyip/bun-build",
-    "bun-loader-css": "github:kankungyip/bun-loader-css"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "classnames": "^2.3.2",
-    "preact": "^10.18.1",
-    "@blockcode/core": "workspace:*"
+    "@types/bun": "latest"
   }
 }
