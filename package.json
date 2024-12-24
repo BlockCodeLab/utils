@@ -10,7 +10,8 @@
     "konva": "^9.3.16",
     "localforage": "^1.10.0",
     "nanoid": "^5.0.9",
-    "preact": "^10.25.0"
+    "preact": "^10.25.0",
+    "save-svg-as-png": "^1.4.17"
   },
   "devDependencies": {
     "@types/bun": "latest"

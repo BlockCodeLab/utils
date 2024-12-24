@@ -5,8 +5,8 @@ import { exportFile } from './export-file';
 export async function saveProjectToComputer(projectJson) {
   const zip = JSZip();
 
-  if (projectJson.assetList) {
-    projectJson.assetList = projectJson.assetList.map(({ data, ...asset }) => {
+  if (projectJson.assets) {
+    projectJson.assets = projectJson.assets.map(({ data, ...asset }) => {
       if (data) {
         const extname = mime.getExtension(asset.type);
         zip.file(`${asset.id}.${extname}`, data, { base64: true });
@@ -20,7 +20,7 @@ export async function saveProjectToComputer(projectJson) {
   exportFile(blob, `${projectJson.name ?? 'BlockCode Project'}.bcp`);
 }
 
-export function openPorjectFromComputer() {
+export function openProjectFromComputer() {
   return new Promise((resolve, reject) => {
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
@@ -40,12 +40,12 @@ export function openPorjectFromComputer() {
       } catch (err) {
         reject(err);
       }
-      for (const key in projectJson.assetList) {
-        const asset = projectJson.assetList[key];
+      for (const key in projectJson.assets) {
+        const asset = projectJson.assets[key];
         const extname = mime.getExtension(asset.type);
         const data = await zip.file(`${asset.id}.${extname}`)?.async('base64');
         if (data) {
-          projectJson.assetList[key] = { data, ...asset };
+          projectJson.assets[key] = { data, ...asset };
         }
       }
       if (!projectJson.name) {

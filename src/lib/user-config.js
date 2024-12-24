@@ -15,7 +15,7 @@ export function getUserLanguage() {
   return localStorage.getItem(Config.Language);
 }
 
-// 左右侧边栏反转
+// 停靠栏是否反转
 //
 // 不同编辑器独立设置
 export function putDockReversed(id, flag) {

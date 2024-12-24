@@ -12,6 +12,8 @@ export { default as mime } from 'mime/lite';
 
 export { nanoid } from 'nanoid';
 
+export { saveSvgAsPng, svgAsDataUri } from 'save-svg-as-png';
+
 export { Color } from './lib/color';
 
 export { exportFile } from './lib/export-file';
@@ -20,17 +22,17 @@ export { flatChildren } from './lib/flat-children';
 
 export { MathUtils } from './lib/math';
 
-export { openPorjectFromComputer, saveProjectToComputer } from './lib/project-file';
+export { openProjectFromComputer, saveProjectToComputer } from './lib/project-file';
 
 export {
-  cloneProject,
   delProject,
   getProject,
-  getProjectsThumbs,
   putProject,
+  cloneProject,
   renameProject,
+  getProjectsThumbs,
 } from './lib/project-storage';
 
 export { isDesktop, isMac, sleep, sleepMs, xmlEscape } from './lib/simples';
 
-export { getDockReversed, getUserLanguage, putDockReversed, putUserLanguage } from './lib/user-config';
+export { getUserLanguage, putUserLanguage, getDockReversed, putDockReversed } from './lib/user-config';

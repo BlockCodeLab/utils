@@ -11,17 +11,18 @@ export async function getProject(key) {
   return await localForage.getItem(key);
 }
 
-export async function putProject(project, onGetThumb) {
+export async function putProject(project, onThumb) {
   const key = project.key || nanoid();
+  const thumb = await onThumb();
   await localForage.setItem(key, {
     key,
+    thumb,
     id: project.id,
+    meta: project.meta,
     name: project.name,
     files: project.files,
     assets: project.assets,
     modifiedDate: Date.now(),
-    thumb: onGetThumb(onGetThumb),
-    meta: project.meta,
   });
   return key;
 }
