@@ -6,8 +6,8 @@
   "module": "./dist/index.js",
   "dependencies": {
     "classnames": "^2.5.1",
+    "html2canvas": "^1.4.1",
     "keymirror": "^0.1.1",
-    "konva": "^9.3.16",
     "localforage": "^1.10.0",
     "nanoid": "^5.0.9",
     "preact": "^10.25.0",

@@ -8,10 +8,6 @@
 
   zip 压缩和解压缩工具
 
-- `import { Konva } from '@blockcode/utils';`
-
-  Konva 图形库
-
 - `import { keyMirror } from '@blockcode/utils';`
 
   自动将 Key 作为 Value
