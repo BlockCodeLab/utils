@@ -1,8 +1,8 @@
 export { default as classNames } from 'classnames';
 
-export { default as JSZip } from 'jszip';
+export { default as html2canvas } from 'html2canvas';
 
-export { default as Konva } from 'konva';
+export { default as JSZip } from 'jszip';
 
 export { default as keyMirror } from 'keymirror';
 
@@ -20,7 +20,7 @@ export { exportFile } from './lib/export-file';
 
 export { flatChildren } from './lib/flat-children';
 
-export { MathUtils } from './lib/math';
+export { MathUtils } from './lib/math-utils';
 
 export { openProjectFromComputer, saveProjectToComputer } from './lib/project-file';
 

@@ -22,6 +22,7 @@ export async function putProject(project, onThumb) {
     name: project.name,
     files: project.files,
     assets: project.assets,
+    fileId: project.fileId,
     modifiedDate: Date.now(),
   });
   return key;
