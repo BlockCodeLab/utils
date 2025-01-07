@@ -12,6 +12,8 @@ export { default as mime } from 'mime/lite';
 
 export { nanoid } from 'nanoid';
 
+export { default as UPNG } from 'upng-js';
+
 export { saveSvgAsPng, svgAsDataUri } from 'save-svg-as-png';
 
 export { Color } from './lib/color';
