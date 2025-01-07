@@ -35,4 +35,13 @@ export {
 
 export { isDesktop, isMac, sleep, sleepMs, xmlEscape } from './lib/simples';
 
-export { getUserLanguage, putUserLanguage, getDockReversed, putDockReversed } from './lib/user-config';
+export {
+  getUserLanguage,
+  putUserLanguage,
+  putEditorAllConfig,
+  getEditorAllConfig,
+  putEditorConfig,
+  getEditorConfig,
+  getDockReversed,
+  putDockReversed,
+} from './lib/user-config';
