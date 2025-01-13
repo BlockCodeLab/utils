@@ -35,7 +35,7 @@ export {
   getProjectsThumbs,
 } from './lib/project-storage';
 
-export { isDesktop, isMac, sleep, sleepMs, xmlEscape } from './lib/simples';
+export { isDesktop, isMac, sleep, sleepMs, xmlEscape, arrayBufferToBase64, base64ToArrayBuffer } from './lib/simples';
 
 export {
   getUserLanguage,
